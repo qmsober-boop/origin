@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>价比宝 | 多平台价格对比</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">价比宝</div>
+      <p class="subtitle">多平台价格一屏对比</p>
+    </header>
+
+    <main class="container">
+      <section class="search-panel" aria-label="搜索商品">
+        <div class="search-row">
+          <label for="searchInput" class="sr-only">搜索商品</label>
+          <input id="searchInput" type="text" placeholder="输入商品名称" autocomplete="off" />
+          <button id="searchBtn" type="button">搜索</button>
+        </div>
+
+        <div class="filter-row">
+          <label for="platformFilter">平台</label>
+          <select id="platformFilter">
+            <option value="all">全部平台</option>
+            <option value="京东">京东</option>
+            <option value="淘宝">淘宝</option>
+            <option value="拼多多">拼多多</option>
+            <option value="苏宁">苏宁</option>
+          </select>
+
+          <label for="sortBy">排序</label>
+          <select id="sortBy">
+            <option value="priceAsc">价格↑</option>
+            <option value="priceDesc">价格↓</option>
+            <option value="ratingDesc">评分↓</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="summary" id="summary" aria-live="polite"></section>
+      <section class="results" id="results" aria-label="比价结果"></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
